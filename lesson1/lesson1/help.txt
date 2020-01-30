@@ -1,0 +1,14 @@
+int main()
+{	
+	Node head(1);
+	head.next = new Node(2);
+	head.next->next = new Node(3);
+	Node temp = head;
+	while (temp.next != nullptr)
+	{
+		cout << temp.data << " ";
+		temp = *(temp.next);
+	}
+	cout << temp.data;
+	return 0;
+}
