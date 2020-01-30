@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cassert>
 
 using namespace std;
 
@@ -36,11 +37,7 @@ public:
 	}
 	int get(int index)
 	{
-		if (index > this->length || index < 1)
-		{
-			// бросить исключение
-			return -1;
-		}
+		assert(index >= 1 && index <= length);
 		Node* temp = this->head;
 		for (int i = 0; i < index - 1; ++i)
 		{
@@ -53,13 +50,7 @@ public:
 int main()
 {	
 	MyList l(1);
-	for (int i = 2; i < 11; ++i)
-	{
-		l.add(i * i);
-	}
-	for (int i = 1; i < 11; ++i)
-	{
-		cout << l.get(i) << " ";
-	}
+	cout << l.get(10);
+
 	return 0;
 }
