@@ -6,7 +6,7 @@ class List
 {
 public:
 	List();
-	/*virtual ~List();*/
+	virtual ~List();
 	List& operator +=(int i);
 	int& operator [](const int i);
 	bool MaxMin(int i);

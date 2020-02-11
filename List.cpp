@@ -6,18 +6,18 @@ List::List()
 	tail_ = nullptr;
 }
 
-//List::~List()
-//{
-//	int size = 0;
-//	size = this->whatSize();
-//	while (size)
-//	{
-//		Node* temp = head_;
-//		head_ = head_->next_;
-//		delete temp;
-//		size--;
-//	}
-//}
+List::~List()
+{
+	int size = 0;
+	size = this->whatSize();
+	while (size)
+	{
+		Node* temp = head_;
+		head_ = head_->next_;
+		delete temp;
+		size--;
+	}
+}
 
 
 
